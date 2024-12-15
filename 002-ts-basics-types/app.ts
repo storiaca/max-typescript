@@ -1,9 +1,10 @@
+//const person: { name: string; age: number } = {
 const person = {
   name: "Maximilian",
   age: 30,
 };
 
-console.log(person);
+console.log(person.name);
 
 /* function add(n1: number, n2: number, showResult: boolean, phrase: string) {
   // if (typeof n1 !== "number" && typeof n2 !== "number") {
