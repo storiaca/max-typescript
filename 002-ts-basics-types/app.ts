@@ -2,9 +2,17 @@
 const person = {
   name: "Maximilian",
   age: 30,
+  hobbies: ["Sports", "Cooking"],
 };
 
+let favoriteActivities: string[];
+favoriteActivities = ["Sport"];
+
 console.log(person.name);
+
+for (const hobby of person.hobbies) {
+  console.log(hobby.toUpperCase());
+}
 
 /* function add(n1: number, n2: number, showResult: boolean, phrase: string) {
   // if (typeof n1 !== "number" && typeof n2 !== "number") {

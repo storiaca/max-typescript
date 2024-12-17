@@ -2,8 +2,15 @@
 var person = {
     name: "Maximilian",
     age: 30,
+    hobbies: ["Sports", "Cooking"],
 };
+var favoriteActivities;
+favoriteActivities = ["Sport"];
 console.log(person.name);
+for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
+    var hobby = _a[_i];
+    console.log(hobby.toUpperCase());
+}
 /* function add(n1: number, n2: number, showResult: boolean, phrase: string) {
   // if (typeof n1 !== "number" && typeof n2 !== "number") {
   //   throw new Error("Incorrect input!");
