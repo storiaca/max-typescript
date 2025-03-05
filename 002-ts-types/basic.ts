@@ -4,3 +4,9 @@ console.log("Hello TypeScript!");
 // tsc 002-ts-types/basic.ts
 // dobijamo fajl basic.js
 // pokrenemo ga sa: node basic.js
+
+/* Types */
+// variables: string, number, boolean
+let userName: string;
+
+userName = "Aleksandar";
