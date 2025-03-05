@@ -11,3 +11,9 @@ https://www.typescriptlang.org/download/
 ```bash
 npm install -g typescript
 ```
+
+## Check version globally
+
+```bash
+tsc -v
+```

@@ -8,5 +8,6 @@ console.log("Hello TypeScript!");
 /* Types */
 // variables: string, number, boolean
 let userName: string;
+let userAge = 38;
 
 userName = "Aleksandar";
