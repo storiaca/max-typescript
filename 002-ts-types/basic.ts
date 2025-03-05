@@ -7,7 +7,7 @@ console.log("Hello TypeScript!");
 
 /* Types */
 // variables: string, number, boolean
-// let userName: string;
+let userName: string;
 let userAge = 38;
 
 userName = "Aleksandar";
@@ -19,4 +19,4 @@ function add(a: number, b = 5) {
 }
 
 add(10);
-// moramo da prosledimo broj kao parameta
+// moramo da prosledimo broj kao parametar
