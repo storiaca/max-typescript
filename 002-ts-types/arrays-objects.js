@@ -9,5 +9,17 @@ users = [1, "Max"];
 // mozemo da koristimo i generics za tipove niza
 var korisnici;
 korisnici = ["Aca", 4];
-// tuples type
+// tuples type, moze da budu bilo koje duzine i tipa
 var possibleResults; // [1, -1]
+possibleResults = [3, -5];
+// possibleResults = [5, 10, 12]; // error, vise od 2 tipa
+// object tipovi
+var user = {
+    name: "Max",
+    age: 35,
+    hobbies: ["Soprts", "Cooking"],
+    role: {
+        description: "admin",
+        id: 5,
+    },
+};

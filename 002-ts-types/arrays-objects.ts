@@ -16,5 +16,26 @@ let korisnici: Array<string | number>;
 
 korisnici = ["Aca", 4];
 
-// tuples type
+// tuples type, moze da budu bilo koje duzine i tipa
 let possibleResults: [number, number]; // [1, -1]
+possibleResults = [3, -5];
+// possibleResults = [5, 10, 12]; // error, vise od 2 tipa
+
+// object tipovi
+let user: {
+  name: string;
+  age: number | string;
+  hobbies: string[];
+  role: {
+    description: string;
+    id: number;
+  };
+} = {
+  name: "Max",
+  age: 35,
+  hobbies: ["Soprts", "Cooking"],
+  role: {
+    description: "admin",
+    id: 5,
+  },
+};
