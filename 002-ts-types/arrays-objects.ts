@@ -15,3 +15,6 @@ users = [1, "Max"];
 let korisnici: Array<string | number>;
 
 korisnici = ["Aca", 4];
+
+// tuples type
+let possibleResults: [number, number]; // [1, -1]

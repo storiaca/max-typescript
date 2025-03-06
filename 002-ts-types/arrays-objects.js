@@ -9,3 +9,5 @@ users = [1, "Max"];
 // mozemo da koristimo i generics za tipove niza
 var korisnici;
 korisnici = ["Aca", 4];
+// tuples type
+var possibleResults; // [1, -1]
