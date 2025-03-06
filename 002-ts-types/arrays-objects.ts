@@ -9,3 +9,9 @@ let hobbies = ["Sports", "Cooking"];
 let users: (string | number)[];
 
 users = [1, "Max"];
+
+// mozemo da koristimo i generics za tipove niza
+
+let korisnici: Array<string | number>;
+
+korisnici = ["Aca", 4];
