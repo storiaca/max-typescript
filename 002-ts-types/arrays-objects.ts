@@ -42,3 +42,11 @@ let user: {
 
 // ovaj tip {} ne znaci da mora da bude objekat, znaci bilo koja vrednost koja nije undefined ili null
 let val: {} = "some text";
+
+// fleksibilni objekti sa Record tipom koji moze da se koristi kada ne znamo unapred koji ce tip da bude, navodimo koji ce da bude key tip kao prva vrednost, a kao druga navodimo kojieg ce tipa da budu vrednosti
+let data: Record<string, number | string>;
+
+data = {
+  entry1: 1,
+  entry2: "some string",
+};
