@@ -23,3 +23,5 @@ var user = {
         id: 5,
     },
 };
+// ovaj tip {} ne znaci da mora da bude objekat, znaci bilo koja vrednost koja nije undefined ili null
+var val = "some text";
