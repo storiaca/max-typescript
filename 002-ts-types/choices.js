@@ -20,3 +20,6 @@ roleUser = "guest";
 // possibleResults = [1, -1]
 var possibleResults;
 possibleResults = [1, -1];
+function access(role) {
+    // uradi nesto...
+}

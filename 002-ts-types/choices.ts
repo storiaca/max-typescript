@@ -25,3 +25,15 @@ roleUser = "guest";
 // possibleResults = [1, -1]
 let possibleResults: [1 | -1, 1 | -1];
 possibleResults = [1, -1];
+
+// type aliases
+type RoleUser = "admin" | "editor" | "guest" | "reader";
+type UserRole = {
+  name: string;
+  age: number;
+  role: RoleUser;
+  permissions: string[];
+};
+function access(role: UserRole) {
+  // uradi nesto...
+}
