@@ -1,7 +1,8 @@
+// const inputEl = document.getElementById("user-name")!;
 const inputEl = document.getElementById("user-name");
 
-if (!inputEl) {
-  throw new Error("Element not found!");
-}
+// if (!inputEl) {
+//   throw new Error("Element not found!");
+// }
 
-console.log(inputEl.value);
+console.log(inputEl?.value);
