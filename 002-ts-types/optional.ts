@@ -11,9 +11,11 @@ type User = {
   role?: "admin" | "guest";
 };
 
-// nullish coalescing - ??
+// nullish coalescing - ?? ovo je js operator
 //let input = null;
 let input = "";
 
 // const didProvideInput = input || false;
 const didProvideInput = input ?? false;
+
+// ovaj operator ?? proverava da li je sa njegove leve strane vrednost null ili undefined, sve ostalo uzima u obzir cak i prazan string, sto ga dosta razlikuje od || operatora, zato ce vrednost da bude prazan string
