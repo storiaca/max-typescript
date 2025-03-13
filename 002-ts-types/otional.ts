@@ -10,3 +10,10 @@ type User = {
   age: number;
   role?: "admin" | "guest";
 };
+
+// nullish coalescing - ??
+//let input = null;
+let input = "";
+
+// const didProvideInput = input || false;
+const didProvideInput = input ?? false;
