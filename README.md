@@ -17,3 +17,9 @@ npm install -g typescript
 ```bash
 tsc -v
 ```
+
+## Create ts config file
+
+```bash
+tsc --init
+```
