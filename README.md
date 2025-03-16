@@ -23,3 +23,13 @@ tsc -v
 ```bash
 tsc --init
 ```
+
+## Watch mode
+
+```bash
+tsc --watch
+```
+
+## DefinitelyTyped github
+
+https://github.com/DefinitelyTyped/DefinitelyTyped
