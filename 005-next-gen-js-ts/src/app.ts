@@ -34,3 +34,11 @@ const button = document.querySelector("button");
 if (button) {
   button.addEventListener("click", (event) => console.log(event));
 }
+
+// default function parameters
+
+function exampleAdd(a: number, b: number = 78) {
+  return a + b;
+}
+
+console.log(exampleAdd(56));
