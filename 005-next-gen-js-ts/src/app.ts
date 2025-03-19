@@ -61,3 +61,17 @@ const person = {
 const copiedPerson = { ...person };
 
 console.log(copiedPerson);
+
+// rest operator
+
+const add3 = (...numbers: number[]) => {
+  let result = 0;
+
+  result = numbers.reduce((curResult, curValue) => curResult + curValue, 0);
+
+  return result;
+};
+
+const addedNumbers = add3(5, 10, 23, 45, 72);
+
+console.log(addedNumbers);
