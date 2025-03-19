@@ -54,8 +54,8 @@ activeHobbies.push(...hobbies);
 console.log(activeHobbies);
 
 const person = {
-  name: "Aca",
-  age: 30,
+  firstName: "Aca",
+  agePerson: 30,
 };
 
 const copiedPerson = { ...person };
@@ -75,3 +75,12 @@ const add3 = (...numbers: number[]) => {
 const addedNumbers = add3(5, 10, 23, 45, 72);
 
 console.log(addedNumbers);
+
+// array and object destructuring
+const [hobby1, hobby2, ...remainingHobbies] = hobbies;
+
+console.log(hobbies, hobby1, hobby2);
+
+const { firstName, agePerson } = person;
+
+console.log(firstName, agePerson);
