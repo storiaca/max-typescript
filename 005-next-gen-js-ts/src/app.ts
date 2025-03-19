@@ -42,3 +42,22 @@ function exampleAdd(a: number, b: number = 78) {
 }
 
 console.log(exampleAdd(56));
+
+// ovde je bitan red, ako definisemo prvi parametar da ima default vrednost onda moramo tako i da pozovemo funkciju
+
+// spread operator
+const hobbies = ["Sports", "Playing", "Reading"];
+const activeHobbies = ["Cooking"];
+
+activeHobbies.push(...hobbies);
+
+console.log(activeHobbies);
+
+const person = {
+  name: "Aca",
+  age: 30,
+};
+
+const copiedPerson = { ...person };
+
+console.log(copiedPerson);
