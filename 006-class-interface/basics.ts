@@ -10,7 +10,7 @@
 
 // drugi nacin da kreiramo klasu na kraci nacin
 class User {
-  public hobbies: string[] = [];
+  readonly hobbies: string[] = [];
   constructor(public name: string, private age: number) {}
 
   greet() {
@@ -30,3 +30,8 @@ const fred = new User("Fred", 27);
 console.log(aca.greet());
 
 console.log(aca, fred);
+
+// mozemo da koristimo i readonly kljucnu rec, moze da se korsti u kombinaciji sa public ili private ali i bez nje, ona onznacava da property ne moze da se menja, ne moze da se ponovo dodeli
+
+// aca.hobbies = []; // ovo ne moze ako je hobbies readonly
+aca.hobbies.push("Sports"); // ovo moze zato sto je hobbies array, tehnicki mi ga ovako ne menjamo, zato sto baratamo original nizom u memoriji
