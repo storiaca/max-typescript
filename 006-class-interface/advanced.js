@@ -42,3 +42,22 @@ class Employee extends UserName {
         console.log(this._firstname);
     }
 }
+class UIElement {
+    identifier;
+    constructor(identifier) {
+        this.identifier = identifier;
+    }
+    clone(targetLocation) {
+        // logic to duplicate the UI Element
+    }
+}
+// let uiElement = new UIElement(); // ovo ne moze zato sto je klasa abstract
+class SideDrawerElement extends UIElement {
+    identifier;
+    position;
+    constructor(identifier, position) {
+        super(identifier);
+        this.identifier = identifier;
+        this.position = position;
+    }
+}
