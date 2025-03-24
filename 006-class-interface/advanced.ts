@@ -38,3 +38,14 @@ const john = new UserName();
 john.firstname = "John";
 john.lastName = "Petrovic";
 console.log(john.fullName);
+
+class Employee extends UserName {
+  constructor(public jobTitle: string) {
+    super();
+    // super.firstname = "Bora";
+  }
+
+  work() {
+    //...
+  }
+}

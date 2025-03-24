@@ -18,9 +18,26 @@ class UserName {
     get fullName() {
         return this._firstname + " " + this._lastName;
     }
+    static eid = "USER";
+    static greetText() {
+        console.log("Hello!");
+    }
 }
 // const john = new UserName("John", "Ristic");
+console.log(UserName.eid);
+UserName.greetText();
 const john = new UserName();
 john.firstname = "John";
 john.lastName = "Petrovic";
 console.log(john.fullName);
+class Employee extends UserName {
+    jobTitle;
+    constructor(jobTitle) {
+        super();
+        this.jobTitle = jobTitle;
+        // super.firstname = "Bora";
+    }
+    work() {
+        //...
+    }
+}
