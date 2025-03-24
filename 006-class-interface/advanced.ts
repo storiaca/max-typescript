@@ -20,9 +20,18 @@ class UserName {
   get fullName() {
     return this._firstname + " " + this._lastName;
   }
+
+  static eid = "USER";
+
+  static greetText() {
+    console.log("Hello!");
+  }
 }
 
 // const john = new UserName("John", "Ristic");
+
+console.log(UserName.eid);
+UserName.greetText();
 
 const john = new UserName();
 
