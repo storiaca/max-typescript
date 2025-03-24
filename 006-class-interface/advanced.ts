@@ -1,6 +1,6 @@
 class UserName {
-  private _firstname: string = "";
-  private _lastName: string = "";
+  protected _firstname: string = "";
+  protected _lastName: string = "";
   //constructor(private firstname: string, private lastName: string) {}
 
   set firstname(name: string) {
@@ -47,5 +47,6 @@ class Employee extends UserName {
 
   work() {
     //...
+    console.log(this._firstname);
   }
 }

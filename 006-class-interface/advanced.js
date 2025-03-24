@@ -39,5 +39,6 @@ class Employee extends UserName {
     }
     work() {
         //...
+        console.log(this._firstname);
     }
 }
