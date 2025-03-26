@@ -6,6 +6,17 @@ interface Authenticatable {
   logout(): void;
 }
 
+class AuthenticatableUser implements Authenticatable {
+  constructor(
+    public userName: string,
+    public email: string,
+    public password: string
+  ) {}
+
+  login() {}
+  logout() {}
+}
+
 let user: Authenticatable;
 
 user = {
