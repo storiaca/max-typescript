@@ -1,3 +1,5 @@
+function getLength(val: any[]): number;
+function getLength(val: string): string;
 function getLength(val: string | any[]) {
   // return val.length; // X words
   if (typeof val === "string") {
@@ -9,5 +11,5 @@ function getLength(val: string | any[]) {
 }
 
 const numOfWords = getLength("does this work?");
-// numOfWords.length;
+numOfWords.length; // ovo nece biti vise greska kad sm o uradili function overloads
 const numItems = getLength(["Sports", "Cookies"]);
