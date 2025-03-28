@@ -39,9 +39,15 @@ const dbSource: DBSource = {
 
 type Source = FileSource | DBSource;
 
+function isFile(source: Source) {
+  return source.type === "file";
+}
+
+// funkcija isFile nece samo da vrati boolean tip, vec ceo tip FileSource, to se zove type predicate, bice boolean sa ekstra informacijom, ovo vazi za nov ts, u starijim verzijama nije bilo ovako
+
 function loadData(source: Source) {
   // if ('path' in source) {
-  if (source.type === "file") {
+  if (isFile(source)) {
     // source.path
     // source.path; => use that to open the file
     return;
