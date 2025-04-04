@@ -28,3 +28,11 @@ function merge2<T, U>(a: T, b: U) {
 }
 
 const ids2 = merge2(1, "Aleksandar");
+
+// generics and constrains
+function mergeObj<T extends object>(a: T, b: T) {
+  return { ...a, ...b };
+}
+
+const merged = mergeObj({ userName: "Aleksandar" }, { age: 39 });
+console.log(merged);
