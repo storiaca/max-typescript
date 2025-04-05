@@ -30,7 +30,7 @@ function merge2<T, U>(a: T, b: U) {
 const ids2 = merge2(1, "Aleksandar");
 
 // generics and constrains
-function mergeObj<T extends object>(a: T, b: T) {
+function mergeObj<T extends object, U extends object>(a: T, b: U) {
   return { ...a, ...b };
 }
 
