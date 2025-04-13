@@ -12,12 +12,13 @@ const settings = {
 };
 
 // prvi nacin
-type Settings = {
-  difficulty: string;
-  minLevel: number;
-  didStart: boolean;
-  players: string[];
-};
+// type Settings = {
+//   difficulty: string;
+//   minLevel: number;
+//   didStart: boolean;
+//   players: string[];
+// };
+
 // drugi nacin
 type Settings = typeof settings;
 

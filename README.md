@@ -6,7 +6,7 @@ https://www.udemy.com/course/understanding-typescript
 
 ## Install typescript
 
-https://www.typescriptlang.org/download/
+<https://www.typescriptlang.org/download/>
 
 ```bash
 npm install -g typescript
@@ -32,4 +32,4 @@ tsc --watch
 
 ## DefinitelyTyped github
 
-https://github.com/DefinitelyTyped/DefinitelyTyped
+<https://github.com/DefinitelyTyped/DefinitelyTyped>
