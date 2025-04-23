@@ -16,3 +16,7 @@ type AppUser = {
 };
 
 type Perms = AppUser["pemissions"];
+type Perm = Perms[number];
+
+type Names = string[];
+type Name = Names[number];
