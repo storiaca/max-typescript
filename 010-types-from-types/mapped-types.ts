@@ -1,6 +1,6 @@
 type Operations = {
-  add: (a: number, b: number) => number;
-  subtract: (a: number, b: number) => number;
+  readonly add: (a: number, b: number) => number;
+  readonly subtract: (a: number, b: number) => number;
 };
 
 // type Results = {
@@ -9,7 +9,7 @@ type Operations = {
 // };
 
 type Results<T> = {
-  [Key in keyof T]: number;
+  -readonly [Key in keyof T]?: number;
 };
 
 let mathOperations: Operations = {
