@@ -33,3 +33,7 @@ tsc --watch
 ## DefinitelyTyped github
 
 <https://github.com/DefinitelyTyped/DefinitelyTyped>
+
+## Utility Types
+
+<https://www.typescriptlang.org/docs/handbook/utility-types.html>
