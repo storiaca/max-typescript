@@ -37,6 +37,9 @@ function logger(target, ctx) {
     console.log("logger decorator");
     console.log(target);
     console.log(ctx);
+    return class extends target {
+        age = 35;
+    };
 }
 let Person = (() => {
     let _classDecorators = [logger];
@@ -59,3 +62,6 @@ let Person = (() => {
     };
     return Person = _classThis;
 })();
+const max = new Person();
+max.greet();
+console.log(max);
