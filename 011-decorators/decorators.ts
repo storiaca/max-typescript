@@ -8,7 +8,11 @@ function logger<T extends new (...args: any[]) => any>(
   console.log(ctx);
 
   return class extends target {
-    age = 35;
+    constructor(...args: any[]) {
+      super(...args);
+      console.log("class constructor");
+      console.log(this);
+    }
   };
 }
 
@@ -21,5 +25,6 @@ class Person {
 }
 
 const max = new Person();
-max.greet();
-console.log(max);
+const julie = new Person();
+// max.greet();
+// console.log(max);

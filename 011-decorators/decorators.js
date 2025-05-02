@@ -38,7 +38,11 @@ function logger(target, ctx) {
     console.log(target);
     console.log(ctx);
     return class extends target {
-        age = 35;
+        constructor(...args) {
+            super(...args);
+            console.log("class constructor");
+            console.log(this);
+        }
     };
 }
 let Person = (() => {
@@ -63,5 +67,6 @@ let Person = (() => {
     return Person = _classThis;
 })();
 const max = new Person();
-max.greet();
-console.log(max);
+const julie = new Person();
+// max.greet();
+// console.log(max);
