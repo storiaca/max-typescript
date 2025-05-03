@@ -25,6 +25,10 @@ function autobind(target: Function, ctx: ClassMethodDecoratorContext) {
 class Person {
   name = "Max";
 
+  constructor() {
+    this.greet = this.greet.bind(this);
+  }
+
   @autobind
   greet() {
     console.log("Hi, I am " + this.name);
@@ -33,5 +37,8 @@ class Person {
 
 const max = new Person();
 const julie = new Person();
+
+const greet = max.greet;
+greet();
 // max.greet();
 // console.log(max);

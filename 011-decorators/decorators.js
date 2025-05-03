@@ -68,6 +68,9 @@ let Person = (() => {
             __runInitializers(_classThis, _classExtraInitializers);
         }
         name = (__runInitializers(this, _instanceExtraInitializers), "Max");
+        constructor() {
+            this.greet = this.greet.bind(this);
+        }
         greet() {
             console.log("Hi, I am " + this.name);
         }
@@ -76,5 +79,7 @@ let Person = (() => {
 })();
 const max = new Person();
 const julie = new Person();
+const greet = max.greet;
+greet();
 // max.greet();
 // console.log(max);
