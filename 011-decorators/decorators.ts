@@ -17,17 +17,18 @@ function logger<T extends new (...args: any[]) => any>(
 }
 
 function autobind(target: Function, ctx: ClassMethodDecoratorContext) {
-  console.log(target);
-  console.log(ctx);
+  ctx.addInitializer(function (this: any) {
+    this[ctx.name] = this[ctx.name].bind(this);
+  });
 }
 
 @logger
 class Person {
   name = "Max";
 
-  constructor() {
-    this.greet = this.greet.bind(this);
-  }
+  // constructor() {
+  //   this.greet = this.greet.bind(this);
+  // }
 
   @autobind
   greet() {
