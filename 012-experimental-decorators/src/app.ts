@@ -100,3 +100,31 @@ class Product {
 
 const p1 = new Product("Book", 19);
 const p2 = new Product("Book 2", 25);
+
+function Autobind(_: any, _2: string | Symbol, descriptor: PropertyDescriptor) {
+  const originalMethod = descriptor.value;
+  const adjDescriptor: PropertyDescriptor = {
+    configurable: true,
+    enumerable: false,
+    get() {
+      const boundFn = originalMethod.bind(this);
+      return boundFn;
+    },
+  };
+  return adjDescriptor;
+}
+
+class Printer {
+  message = "This works!";
+
+  @Autobind
+  showMessage() {
+    console.log(this.message);
+  }
+}
+
+const p = new Printer();
+
+const button = document.querySelector("button")!;
+
+button.addEventListener("click", p.showMessage);
