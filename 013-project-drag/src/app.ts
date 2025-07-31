@@ -115,6 +115,13 @@ function AutoBind(_: any, _2: string, descriptor: PropertyDescriptor) {
   return adjDescriptor;
 }
 
+/* Component Base Class */
+class Component<T extends HTMLElement, U> {
+  templateElement: HTMLTemplateElement;
+  hostElement: HTMLDivElement;
+  element: HTMLElement;
+}
+
 /* ProjectList Class */
 class ProjectList {
   templateElement: HTMLTemplateElement;
