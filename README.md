@@ -37,3 +37,7 @@ tsc --watch
 ## Utility Types
 
 <https://www.typescriptlang.org/docs/handbook/utility-types.html>
+
+## Drag and drop
+
+<https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API>
