@@ -41,3 +41,7 @@ tsc --watch
 ## Drag and drop
 
 <https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API>
+
+## JS Modules
+
+<https://medium.com/computed-comparisons/commonjs-vs-amd-vs-requirejs-vs-es6-modules-2e814b114a0b>
