@@ -1,4 +1,4 @@
-/// <refernce path="base-component.ts" />
+/// <reference path="base-component.ts" />
 
 /* ProjectList Class */
 namespace App {
