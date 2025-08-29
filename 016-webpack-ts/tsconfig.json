@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "es6",
+    "module": "ESNext",
+    "lib": ["dom", "es6", "dom.iterable", "scripthost"],
+    "sourceMap": true,
+    //"outFile": "./dist/bundle.js",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "removeComments": true,
+    "noEmitOnError": true,
+
+    /* Strict Type-Checking Options */
+    "strict": true,
+
+    /* Additional Checks */
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+
+    /* Module Resolution Options */
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+
+    /* Experimental Options */
+    "experimentalDecorators": true
+  },
+  "exclude": ["node_modules"]
+}
