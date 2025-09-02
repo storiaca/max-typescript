@@ -45,3 +45,7 @@ tsc --watch
 ## JS Modules
 
 <https://medium.com/computed-comparisons/commonjs-vs-amd-vs-requirejs-vs-es6-modules-2e814b114a0b>
+
+## Declaration Files
+
+<https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html>
