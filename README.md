@@ -49,3 +49,7 @@ tsc --watch
 ## Declaration Files
 
 <https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html>
+
+## ZOD
+
+<https://zod.dev/>
