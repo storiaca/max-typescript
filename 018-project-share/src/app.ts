@@ -1,4 +1,3 @@
-import { Marker } from "./../node_modules/@types/google.maps/index.d";
 import axios from "axios";
 const form = document.querySelector("form")!;
 const addressInput = document.getElementById("address")! as HTMLInputElement;
@@ -13,24 +12,24 @@ type GoogleGeocodingResponse = {
 };
 
 let map: google.maps.Map;
-async function initMap(coordinates: MapCoordinates): Promise<void> {
+async function initMap(position: MapCoordinates): Promise<void> {
   const { Map } = (await google.maps.importLibrary(
     "maps"
   )) as google.maps.MapsLibrary;
-  const { Marker } = (await google.maps.importLibrary(
+  const { AdvancedMarkerElement } = (await google.maps.importLibrary(
     "marker"
   )) as google.maps.MarkerLibrary;
-  if (!map) {
-    map = new Map(document.getElementById("map") as HTMLElement, {
-      center: coordinates,
-      zoom: 8,
-    });
-  }
-  new Marker({
-    position: coordinates,
-    map,
+
+  map = new Map(document.getElementById("map") as HTMLElement, {
+    zoom: 8,
+    center: position,
+    mapId: "DEMO_MAP_ID",
   });
-  map.setCenter(coordinates);
+
+  new AdvancedMarkerElement({
+    map: map,
+    position: position,
+  });
 }
 
 function searchAddressHandler(event: Event) {

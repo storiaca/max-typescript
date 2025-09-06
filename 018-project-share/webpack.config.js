@@ -26,18 +26,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new Dotenv(),
-    new HtmlWebpackPlugin({
-      template: "./src/index.html",
-      templateParameters: {
-        GOOGLE_API_KEY: process.env.GOOGLE_API_KEY,
-      },
-    }),
-    new webpack.DefinePlugin({
-      GOOGLE_API_KEY: JSON.stringify(process.env.GOOGLE_API_KEY),
-    }),
-  ],
+  plugins: [new Dotenv()],
   resolve: {
     extensions: [".ts", ".js"],
   },
