@@ -1,5 +1,6 @@
 const path = require("path");
 const Dotenv = require("dotenv-webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -25,7 +26,18 @@ module.exports = {
       },
     ],
   },
-  plugins: [new Dotenv()],
+  plugins: [
+    new Dotenv(),
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+      templateParameters: {
+        GOOGLE_API_KEY: process.env.GOOGLE_API_KEY,
+      },
+    }),
+    new webpack.DefinePlugin({
+      GOOGLE_API_KEY: JSON.stringify(process.env.GOOGLE_API_KEY),
+    }),
+  ],
   resolve: {
     extensions: [".ts", ".js"],
   },
