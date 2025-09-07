@@ -17,12 +17,17 @@ function App() {
       description: "Practice working with TypeScript",
     },
   ]);
+
+  function handleDeleteGoal(id: number) {
+    setGoals((prevGoals) => prevGoals.filter((goal) => goal.id !== id));
+  }
+
   return (
     <main>
       <Header image={{ src: goalsImg, alt: "List of goals" }}>
         <h1>Your Course Goals</h1>
       </Header>
-      <CourseGoals goals={goals} />
+      <CourseGoals goals={goals} onDelete={handleDeleteGoal} />
     </main>
   );
 }
