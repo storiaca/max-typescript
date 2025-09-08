@@ -1,6 +1,10 @@
 import { type FormEvent, useRef } from "react";
 
-const NewGoal = () => {
+interface NewGoalProps {
+  onAdd: (text: string, summary: string) => void;
+}
+
+const NewGoal = ({ onAdd }: NewGoalProps) => {
   const goalRef = useRef<HTMLInputElement>(null);
   const summaryRef = useRef<HTMLInputElement>(null);
 
@@ -11,6 +15,7 @@ const NewGoal = () => {
     const enteredSummary = summaryRef.current!.value;
 
     // validation
+    onAdd(enteredGoal, enteredSummary);
   }
 
   return (

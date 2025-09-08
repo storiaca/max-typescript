@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "./components/Header";
 import CourseGoals from "./components/CourseGoals";
+import NewGoal from "./components/NewGoal";
 
 import goalsImg from "./assets/goals.jpg";
 
@@ -22,11 +23,18 @@ function App() {
     setGoals((prevGoals) => prevGoals.filter((goal) => goal.id !== id));
   }
 
+  function handleAddGoal(text: string, summary: string) {
+    setGoals((prevGoals) =>
+      prevGoals.concat({ id: Math.random(), title: text, description: summary })
+    );
+  }
+
   return (
     <main>
       <Header image={{ src: goalsImg, alt: "List of goals" }}>
         <h1>Your Course Goals</h1>
       </Header>
+      <NewGoal onAdd={handleAddGoal} />
       <CourseGoals goals={goals} onDelete={handleDeleteGoal} />
     </main>
   );
